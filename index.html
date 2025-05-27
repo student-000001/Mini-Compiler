@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini C Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1> Mini C Analyzer</h1>
+    <p>Type your pseudo-C code below and hit "Analyze" to see the results!</p>
+    <textarea id="codeInput" placeholder="// Write your pseudo-C code here"></textarea>
+    <button id="compileButton">Analyze</button>
+    <div id="output" class="output"></div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    // Connect button for click to compile function
+    document.getElementById("compileButton").addEventListener("click", () => {
+      const sourceCode = document.getElementById("codeInput").value;
+      const result = compile(sourceCode); // Call compile function
+      document.getElementById("output").textContent = result;
+    });
+  </script>
+</body>
+</html>

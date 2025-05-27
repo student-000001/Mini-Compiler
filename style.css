@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
+  background-color: #1e1e2f;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  background-color: #2e2e3e;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #61dafb;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  font-size: 16px;
+  background-color: #1e1e2f;
+  color: #d4d4d4;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 10px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #4db8dd;
+}
+
+.output {
+  margin-top: 20px;
+  background-color: #12121c;
+  padding: 15px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-size: 15px;
+  border: 1px solid #444;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.output::before {
+  content: "Output:";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #90ee90;
+}
+
+.output.error {
+  color: #ff6b6b;
+  border-color: red;
+}
